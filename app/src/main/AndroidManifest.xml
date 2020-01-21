@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_custom"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FRONTACTIVITY"></activity>
+        <activity android:name=".prescription"></activity>
+        <activity android:name=".FRONTACTIVITY" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
