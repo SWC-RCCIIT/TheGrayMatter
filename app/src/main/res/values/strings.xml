@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VOICE PRESCRIPTION</string>
+    <string name="front">Prescribo</string>
+    <string-array name="Gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+
+
+</resources>
