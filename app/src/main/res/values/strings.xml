@@ -7,6 +7,7 @@
         <item>Female</item>
         <item>Others</item>
     </string-array>
+    <string name="textview">Tap On Mic</string>
 
 
 </resources>
