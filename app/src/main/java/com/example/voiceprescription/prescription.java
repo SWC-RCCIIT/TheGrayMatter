@@ -19,6 +19,15 @@ public class prescription extends AppCompatActivity {
      Button bt;
      String a;
      String b;
+     String c;
+     String d;
+    String e;
+    String f;
+    String gi;
+    String h;
+
+
+
 
     //private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
 
@@ -142,8 +151,27 @@ public class prescription extends AppCompatActivity {
     {
 
         Intent g = new Intent(prescription.this , fourthactivity.class);
+        c=text1.getText().toString();
+        d=text2.getText().toString();
+        e=text3.getText().toString();
+        f=text4.getText().toString();
+        gi=text5.getText().toString();
+        h=text6.getText().toString();
+
+
+
+
+
+
+
         g.putExtra("Name1",a);
         g.putExtra("Age1",b);
+        g.putExtra("Diag", c);
+        g.putExtra("sym", d);
+        g.putExtra("drug", e);
+        g.putExtra("dosages", f);
+        g.putExtra("con", gi);
+        g.putExtra("adv", h);
 
 
 
