@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,10 @@ import android.widget.Toast;
 
 public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
+    String user;
+    String age;
+    EditText name;
+    EditText ag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +29,13 @@ public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnIt
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        EditText name =(EditText) findViewById(R.id.editText);
-        EditText age =(EditText) findViewById(R.id.editText1);
-        Spinner gen = (Spinner) findViewById(R.id.spinner);
-        Button pro = (Button)findViewById(R.id.button);
+        name = findViewById(R.id.editText);
+         ag = findViewById(R.id.editText1);
+        Spinner gen = findViewById(R.id.spinner);
+        Button pro = findViewById(R.id.button);
+
+
+
 
         pro.setOnClickListener (new View.OnClickListener() {
             @Override
@@ -36,6 +44,12 @@ public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnIt
 
 
                 Intent in= new Intent(FRONTACTIVITY.this, prescription.class);
+                user = name.getText().toString();
+                age= ag.getText().toString();
+
+                in.putExtra("Name",user);
+                in.putExtra("Age",age);
+
                 startActivity(in);
 
             }
@@ -52,9 +66,5 @@ public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    public void text1(View view)
-    {
 
-
-    }
 }

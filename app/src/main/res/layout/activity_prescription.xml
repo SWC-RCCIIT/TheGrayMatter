@@ -2,46 +2,225 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dia"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".prescription"
     android:background="@drawable/gradient"
 
-    >
+    tools:context=".prescription">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="100sp"
-        android:layout_marginLeft="20sp"
-        android:text="Symptoms"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="41sp"
-        tools:layout_editor_absoluteY="113sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:fontFamily="@font/sega"
+        android:text="DIAGNOSIS REPORT"
+        android:textColor="@color/modify"
+        android:textSize="24sp"
 
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="120sp"
+        android:text="Diagnosis :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="175sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150sp"
+        android:layout_marginTop="122sp"
+        android:background="#11000000"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="260sp"
-        android:layout_marginTop="100sp"
+        android:layout_marginLeft="330sp"
+        android:layout_marginTop="117sp"
+        android:onClick="get1"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="208sp"
+        android:text="Symptoms :"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/sym"
+        android:layout_width="175sp"
+        android:layout_height="100sp"
+        android:layout_marginLeft="150sp"
+        android:layout_marginTop="170sp"
+
+        android:background="#11000000"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
+
+    <ImageButton
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="330sp"
+        android:layout_marginTop="200sp"
+        android:onClick="get2"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="290sp"
+        android:text="Drugs"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dr"
+        android:layout_width="100sp"
+        android:layout_height="75sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="335sp"
+        android:background="#11000000"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
+
+    <ImageButton
+        android:id="@+id/b2"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="92sp"
+        android:layout_marginTop="288sp"
+        android:onClick="get3"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="138sp"
+        android:layout_marginTop="290sp"
+        android:text="Dosage"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250sp"
+        android:layout_marginTop="290sp"
+        android:text="Continue For"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/b3"
+        android:layout_width="36sp"
+        android:layout_height="32sp"
+        android:layout_marginLeft="210sp"
+        android:layout_marginTop="288sp"
+        android:onClick="get4"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
+
+    <ImageButton
+        android:id="@+id/b4"
+        android:layout_width="36sp"
+        android:layout_height="32sp"
+        android:layout_marginLeft="370sp"
+        android:layout_marginTop="288sp"
+        android:onClick="get5"
         app:srcCompat="@drawable/ic_keyboard_voice" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="143dp"
-        android:layout_height="99dp"
-        android:layout_marginLeft="175sp"
-        android:layout_marginTop="100sp"
-        android:width="50sp"
+        android:id="@+id/dos"
+        android:layout_width="100sp"
+        android:layout_height="75sp"
+        android:layout_marginLeft="140sp"
+        android:layout_marginTop="335sp"
         android:background="#11000000"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_below="@id/textView3"
-        android:text="Tap on Mic" />
+        android:gravity="center"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/con"
+        android:layout_width="130sp"
+        android:layout_height="75sp"
+        android:layout_marginLeft="253sp"
+        android:layout_marginTop="335sp"
+        android:background="#11000000"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="460sp"
+        android:text="Advice :"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/adv"
+        android:layout_width="wrap_content"
+        android:layout_height="75sp"
+        android:layout_marginLeft="110sp"
+        android:layout_marginTop="438sp"
+        android:background="#11000000"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tap On Mic"
+        android:inputType="textPersonName" />
+
+    <ImageButton
+        android:id="@+id/b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="330sp"
+        android:layout_marginTop="453sp"
+        android:onClick="get6"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600sp"
+        android:background="@android:color/darker_gray"
+        android:text="Generate "
+        android:textStyle="bold" />
+
+
 </RelativeLayout>
