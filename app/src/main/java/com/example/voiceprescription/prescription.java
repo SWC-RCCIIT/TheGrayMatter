@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ import java.util.Locale;
 public class prescription extends AppCompatActivity {
 
      Button bt;
+     String a;
+     String b;
 
     //private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
 
@@ -120,6 +123,11 @@ public class prescription extends AppCompatActivity {
 
 
        bt = findViewById(R.id.generate);
+       a= getIntent().getStringExtra("Name");
+       b=getIntent().getStringExtra("Age");
+
+
+
         bt.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -132,7 +140,13 @@ public class prescription extends AppCompatActivity {
     }
     public void opennext()
     {
+
         Intent g = new Intent(prescription.this , fourthactivity.class);
+        g.putExtra("Name1",a);
+        g.putExtra("Age1",b);
+
+
+
         startActivity(g);
     }
 
