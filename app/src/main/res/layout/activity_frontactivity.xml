@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="250sp"
         android:background="#11000000"
         android:gravity="center_horizontal"
         android:ems="10"
@@ -27,7 +27,7 @@
         android:ems="10"
         android:layout_centerHorizontal="true"
 android:gravity="center_horizontal"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="300sp"
         android:background="#11000000"
         android:inputType="textPersonName"
         android:hint="Enter Patient's Age"/>
@@ -39,7 +39,7 @@ android:gravity="center_horizontal"
 
 
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="350sp"
          />
 
     <TextView
@@ -47,7 +47,7 @@ android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="150sp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="PATIENT DETAILS"
         android:gravity="center_horizontal"
@@ -61,7 +61,7 @@ android:gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:text="PROCEED"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="500sp"
         android:background="#1100"
 
         />

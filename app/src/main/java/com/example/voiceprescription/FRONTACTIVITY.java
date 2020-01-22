@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
+    String user;
+    String age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +26,19 @@ public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnIt
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        EditText name =(EditText) findViewById(R.id.editText);
-        EditText age =(EditText) findViewById(R.id.editText1);
-        Spinner gen = (Spinner) findViewById(R.id.spinner);
-        Button pro = (Button)findViewById(R.id.button);
+        EditText name = findViewById(R.id.editText);
+        EditText ag = findViewById(R.id.editText1);
+        Spinner gen = findViewById(R.id.spinner);
+        Button pro = findViewById(R.id.button);
+
+        Intent i=new Intent();
+        user = name.getText().toString();
+        age=ag.getText().toString();
+        i.putExtra("value", user);
+        i.putExtra("value1",age);
+
+
+
 
         pro.setOnClickListener (new View.OnClickListener() {
             @Override
@@ -52,9 +63,5 @@ public class FRONTACTIVITY extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    public void text1(View view)
-    {
 
-
-    }
 }
